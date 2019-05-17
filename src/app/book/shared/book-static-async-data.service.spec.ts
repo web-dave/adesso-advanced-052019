@@ -10,39 +10,53 @@ describe('BookStaticAsyncDataService', () => {
     });
   });
 
-  it('should be created', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
-    expect(service).toBeTruthy();
-  }));
+  it('should be created', inject(
+    [BookStaticAsyncDataService],
+    (service: BookStaticAsyncDataService) => {
+      expect(service).toBeTruthy();
+    }
+  ));
 
   describe('getBooks()', () => {
-    it('should return the whole list of books with an Observable', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
-      expect(true).toBeFalsy();
-    }));
+    it('should return the whole list of books with an Observable', inject(
+      [BookStaticAsyncDataService],
+      (service: BookStaticAsyncDataService) => {
+        service.getBooks().subscribe(b => expect(b.length).toBe(3));
+      }
+    ));
   });
 
   describe('getBookByIsbn(isbn)', () => {
-    it('should return the first elemnt of data', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
-      expect(true).toBeFalsy();
-    }));
+    it('should return the first elemnt of data', inject(
+      [BookStaticAsyncDataService],
+      (service: BookStaticAsyncDataService) => {
+        expect(true).toBeFalsy();
+      }
+    ));
   });
 
   describe('getBook(book)', () => {
-    it('should return the book argument itself', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
-      expect(true).toBeFalsy();
-    }));
+    it('should return the book argument itself', inject(
+      [BookStaticAsyncDataService],
+      (service: BookStaticAsyncDataService) => {
+        expect(true).toBeFalsy();
+      }
+    ));
   });
-
 
   describe('createBook(book)', () => {
-    it('should return the book argument itself', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
-      expect(true).toBeFalsy();
-    }));
+    it('should return the book argument itself', inject(
+      [BookStaticAsyncDataService],
+      (service: BookStaticAsyncDataService) => {
+        expect(true).toBeFalsy();
+      }
+    ));
 
-    it('should add the new book to the dataset', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
-      expect(true).toBeFalsy();
-    }));
+    it('should add the new book to the dataset', inject(
+      [BookStaticAsyncDataService],
+      (service: BookStaticAsyncDataService) => {
+        expect(true).toBeFalsy();
+      }
+    ));
   });
-
-
-  
 });

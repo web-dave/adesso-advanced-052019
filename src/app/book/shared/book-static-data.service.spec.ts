@@ -1,10 +1,13 @@
 import { BookStaticDataService } from './book-static-data.service';
 import { Book } from './book';
+let service;
+beforeEach(() => {
+  service = new BookStaticDataService();
+});
 
 describe('BookStaticDataService', () => {
   it('should be created', () => {
-    //expect(service).toBeTruthy();
-    expect(true).toBeFalsy();
+    expect(service).toBeTruthy();
   });
 
   describe('getBooks()', () => {
