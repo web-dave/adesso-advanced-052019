@@ -36,7 +36,7 @@ describe('BookStaticDataService', () => {
     }
   ));
 
-  fit('should return a single book', done => {
+  it('should return a single book', done => {
     bdata.getBookByIsbn('foo').subscribe(b => {
       expect(b.title).toBe('Design Patterns');
       console.log('MOOOOOOOIN');
